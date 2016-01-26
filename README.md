@@ -35,3 +35,5 @@ App production database named `todo` created using these commands in PowerShell 
 ```
 
 Testing database is a clone of this named `todo_test`
+
+To run tests, use the PowerShell command `> dnx test`

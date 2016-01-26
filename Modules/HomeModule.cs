@@ -45,7 +45,7 @@ namespace ToDoList
               return View["success.cshtml"];
             };
 
-            //DeleteAll routes
+            //"Clear All" routes
             Post["/tasks/clear"] = _ => {
               Task.DeleteAll();
               return View["cleared.cshtml"];
