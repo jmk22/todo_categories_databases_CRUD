@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+  </head>
+  <body>
+    <h1>To Do List</h1>
+    <hr/>
+    <h2>Are you sure you want to delete this category and all of its tasks?</h2>
+    <h4>@Model.GetName()</h4>
+    <form action="/category/delete/@Model.GetId()" method="post">
+      <button type="submit">Delete</button>
+    </form>
+    <p><a href="/">Back home</a></p>
+  </body>
+</html>

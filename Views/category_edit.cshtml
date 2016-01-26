@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+  </head>
+  <body>
+    <h1>To Do List</h1>
+    <hr />
+    <h2>Edit category: @Model.GetName()</h2>
+    <form action="/category/edit/@Model.GetId()" method="post">
+      <input name="category-id" type="hidden" value="@Model.GetId()">
+      <label for="category-name">Category name</label>
+      <input id="category-name" name="category-name" type="text">
+      <button type="submit">Submit</button>
+    </form>
+    <h4><a href="/">Return home</a></h4>
+  </body>
+</html>

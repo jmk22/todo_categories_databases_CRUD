@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>To Do List</title>
+  </head>
+  <body>
+    <h1>To Do List</h1>
+    <h2>Category: @Model["category"].GetName()</h2>
+    <hr />
+    <h4>Here are all the tasks in this category:</h4>
+    @if (@Model["tasks"].Count == 0){
+      <p>No tasks have been added yet! Why not <a href='/tasks/new'>add one</a>?</p>
+    } else {
+      <ol>
+      @foreach (var task in @Model["tasks"]) {
+        <li>@task.GetDescription()</li>
+      }
+      </ol>
+      <p><a href='/tasks/new'>Add a new task</a></p>
+    }
+
+    <p><a href="/">Return to Main Page</a></p>
+  </body>
+</html>

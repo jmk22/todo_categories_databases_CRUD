@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+  </head>
+  <body>
+    <h1>To Do List</h1>
+    <hr />
+    <h2>Categories:</h2>
+    <ul>
+      @if (Model.Count != 0) {
+        @foreach (var category in Model) {
+          <li><a href="/categories/@category.GetId()">@category.GetName()</a> | <a href="/category/edit/@category.GetId()">Edit</a>| <a href="/category/delete/@category.GetId()">Delete</a></li>
+        }
+      }
+    </ul>
+    <h4><a href="/categories/new">Add a new category</a></h4>
+    <h4><a href="/">Return home</a></h4>
+
+    <form action="/categories/clear" method="post">
+      <button type="submit">Clear all categories</button>
+    </form>
+  </body>
+</html>
